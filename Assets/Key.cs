@@ -22,5 +22,7 @@ public class Key : MonoBehaviour
     public void onKeyPicked()
     {
         door.setIsKeyPickedUp(true);
+        // 鍵をクリックされたときに鍵を非表示にする
+        gameObject.SetActive(false);
     }
 }
