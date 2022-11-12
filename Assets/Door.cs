@@ -8,8 +8,8 @@ public class Door : MonoBehaviour
     public Image doorImage;
     public Sprite imageOpenDoor;
 
+    // 鍵を拾ったか管理するフラグ
     private bool isKeyPickedUp = false;
-
     public void setIsKeyPickedUp(bool isPickedUp)
     {
         isKeyPickedUp = isPickedUp;
@@ -27,8 +27,10 @@ public class Door : MonoBehaviour
 
     }
 
+    // ドアが押されたときに呼び出される関数
     public void open()
     {
+        // 鍵が拾っているかを判定して、拾っていたらドアを開く
         if (isKeyPickedUp)
         {
             doorImage.sprite = imageOpenDoor;

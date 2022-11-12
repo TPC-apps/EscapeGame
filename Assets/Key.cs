@@ -18,6 +18,7 @@ public class Key : MonoBehaviour
         
     }
 
+    // 鍵がクリックされたときに呼び出される関数
     public void onKeyPicked()
     {
         door.setIsKeyPickedUp(true);
