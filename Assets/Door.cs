@@ -7,6 +7,7 @@ public class Door : MonoBehaviour
 {
     public Image doorImage;
     public Sprite imageOpenDoor;
+    public Text clearText;
 
     // 鍵を拾ったか管理するフラグ
     private bool isKeyPickedUp = false;
@@ -34,6 +35,8 @@ public class Door : MonoBehaviour
         if (isKeyPickedUp)
         {
             doorImage.sprite = imageOpenDoor;
+            // ドアを開いてクリアのテキストを表示
+            clearText.gameObject.SetActive(true);
         }
     }
 }
