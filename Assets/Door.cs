@@ -8,6 +8,13 @@ public class Door : MonoBehaviour
     public Image doorImage;
     public Sprite imageOpenDoor;
 
+    private bool isKeyPickedUp = false;
+
+    public void setIsKeyPickedUp(bool isPickedUp)
+    {
+        isKeyPickedUp = isPickedUp;
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,6 +29,9 @@ public class Door : MonoBehaviour
 
     public void open()
     {
-        doorImage.sprite = imageOpenDoor;
+        if (isKeyPickedUp)
+        {
+            doorImage.sprite = imageOpenDoor;
+        }
     }
 }
